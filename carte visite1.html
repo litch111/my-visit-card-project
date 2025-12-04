@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>visit card</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    width: 380px;
+    height: 220px;
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #222, #111);
+    background-size: 400% 400%;
+    border-radius: 16px;
+    border: 1px solid #d4af37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.5s ease, background 0.5s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.7);
+    animation: gradientShift 5s ease infinite;
+  }
+  @keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #d4af37;
+  }
+  .role {
+    font-size: 16px;
+    margin-top: 4px;
+    color: #e6e6e6;
+  }
+  .line {
+    width: 80px;
+    height: 3px;
+    background: #d4af37;
+    margin: 12px 0;
+    border-radius: 3px;
+  }
+  .info {
+    font-size: 14px;
+    color: #ccc;
+    margin: 3px 0;
+  }
+  .right img {
+    width: 90px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <div class="name">Mohamed Amine Nouiri</div>
+    <div class="role">Developper – Étudiant à Leaders University</div>
+    <div class="line"></div>
+    <div class="info">📞 50 314 056</div>
+    <div class="info">📧 aminenouiri813@gmail.com</div>
+    <div class="info">📍 Tunis, Tunisie</div>
+  </div>
+  <div class="right">
+    <img src="amine_nouiri.png" alt="QR Code">
+  </div>
+</div>
+</body>
+</html>
